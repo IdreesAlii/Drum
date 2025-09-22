@@ -43,25 +43,27 @@ drumPad.forEach(pad => {
   });
 
   /* touchstart event for mobile hold loop */
-  pad.addEventListener('touchstart', () => {
-    const key = pad.innerText.trim();
-    const audio = document.getElementById(key);
+ pad.addEventListener('touchstart', (e) => {
+  e.preventDefault(); // ✅ stop synthetic click
 
-    if (audio) {
-      pad.dataset.touchHeld = "true"; // mark as held
+  const key = pad.innerText.trim();
+  const audio = document.getElementById(key);
 
-      const loopTouch = () => {
-        if (pad.dataset.touchHeld === "true") {
-          triggerPad(key); // play sound and flash
-          audio.onended = () => {
-            loopTouch(); // replay only after sound ends
-          };
-        }
-      };
+  if (audio) {
+    pad.dataset.touchHeld = "true"; // mark as held
 
-      loopTouch(); // start loop
-    }
-  });
+    const loopTouch = () => {
+      if (pad.dataset.touchHeld === "true") {
+        triggerPad(key); // play sound and flash
+        audio.onended = () => {
+          loopTouch(); // replay only after sound ends
+        };
+      }
+    };
+
+    loopTouch(); // start loop
+  }
+});
 
   /* touchend and touchcancel to stop loop */
   pad.addEventListener('touchend', () => {
