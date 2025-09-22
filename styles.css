@@ -47,32 +47,33 @@ body {
    transition: box-shadow 0.2s ease;
 }
 .flash-Q {
-   box-shadow: 0 0 20px 10px red;
+   box-shadow: 0 0 20px 10px #FF3B3B; /* bright red */
 }
 .flash-W {
-   box-shadow: 0 0 20px 10px orange;
+   box-shadow: 0 0 20px 10px #FF7A00; /* vivid orange */
 }
 .flash-E {
-   box-shadow: 0 0 20px 10px yellow;
+   box-shadow: 0 0 20px 10px #FFD93D; /* strong yellow */
 }
 .flash-A {
-   box-shadow: 0 0 20px 10px green;
+   box-shadow: 0 0 20px 10px #00C853; /* emerald green */
 }
 .flash-S {
-   box-shadow: 0 0 20px 10px blue;
+   box-shadow: 0 0 20px 10px #2962FF; /* deep blue */
 }
 .flash-D {
-   box-shadow: 0 0 20px 10px purple;
+   box-shadow: 0 0 20px 10px #9C27B0; /* purple */
 }
 .flash-Z {
-   box-shadow: 0 0 20px 10px pink;
+   box-shadow: 0 0 20px 10px #FF4081; /* hot pink */
 }
 .flash-X {
-   box-shadow: 0 0 20px 10px cyan;
+   box-shadow: 0 0 20px 10px #00E5FF; /* cyan */
 }
 .flash-C {
-   box-shadow: 0 0 20px 10px lime;
+   box-shadow: 0 0 20px 10px #76FF03; /* neon lime */
 }
+
 @keyframes press {
    0% {
        transform: scale(1);
