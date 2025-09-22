@@ -1,0 +1,124 @@
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   background-color: #003153;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+#drum-machine {
+   background-color: #000000;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   text-align: center;
+}
+#pad-bank {
+   display: grid;
+   grid-template-columns: repeat(3, 100px);
+   gap: 10px;
+   margin-bottom: 20px;
+}
+.drum-pad {
+   font-size: 20px;
+   background-color: #333333;
+   border: 1px solid #444444;
+   border-radius: 5px;
+   padding: 20px;
+   text-align: center;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+.drum-pad:hover {
+   background-color: #555555;
+}
+.clip {
+   display: none;
+}
+#display {
+   margin-top: 10px;
+   font-size: 1.2em;
+   color:  #00ffea;
+}
+.flash {
+   box-shadow: 0 0 20px 5px yellow;
+   transition: box-shadow 0.2s ease;
+}
+.flash-Q {
+   box-shadow: 0 0 20px 10px red;
+}
+.flash-W {
+   box-shadow: 0 0 20px 10px orange;
+}
+.flash-E {
+   box-shadow: 0 0 20px 10px yellow;
+}
+.flash-A {
+   box-shadow: 0 0 20px 10px green;
+}
+.flash-S {
+   box-shadow: 0 0 20px 10px blue;
+}
+.flash-D {
+   box-shadow: 0 0 20px 10px purple;
+}
+.flash-Z {
+   box-shadow: 0 0 20px 10px pink;
+}
+.flash-X {
+   box-shadow: 0 0 20px 10px cyan;
+}
+.flash-C {
+   box-shadow: 0 0 20px 10px lime;
+}
+@keyframes press {
+   0% {
+       transform: scale(1);
+       background-color: #333333;
+   }
+   50% {
+       transform: scale(0.95);
+       background-color: #555555;
+   }
+   100% {
+       transform: scale(1);
+       background-color: #333333;
+   }
+}
+
+
+@media (max-width: 600px) {
+    #pad-bank {
+        grid-template-columns: repeat(3, 80px);
+        gap: 8px;
+    }
+    .drum-pad {
+        font-size: 18px;
+        padding: 15px;
+    }
+    #drum-machine {
+        padding: 15px;
+    }
+    #display {
+        font-size: 1.3em;
+    }
+    label, input[type="range"] {
+        width: 100%;
+    }
+    input[type="range"] {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+     
+}
+
+
+
+
+
+
+
+
+
